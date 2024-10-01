@@ -104,7 +104,10 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
-		//COMPLETAR
+		self.subir()
+		game.schedule(reloj.tiempo() + 100, {self.subir()})
+		game.schedule(reloj.tiempo() + 150, {self.bajar()})
+		game.schedule(reloj.tiempo() + 250, {self.bajar()})
 	}
 	
 	method subir(){
